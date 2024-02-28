@@ -54,7 +54,10 @@ that AIY sound card is properly connected.
 
 ERROR_NOT_A_FIRST_SOUND_CARD = '''
 Your AIY sound card is not a first sound device. The voice recognizer may be
-unable to find it. Please try removing other sound drivers.
+unable to find it. 
+Pipewire exist on new Raspberry Pi OS
+
+Todo or not : Please try removing other sound drivers.
 '''
 
 ERROR_NO_SPEAKER_SOUND = '''
@@ -102,7 +105,7 @@ def check_sound_card_present():
         print('You have %s installed at index %d!' % (AIY_CARDS[card], index))
         if index != 0:
             error(ERROR_NOT_A_FIRST_SOUND_CARD)
-            return False
+            #return False
 
     return True
 
